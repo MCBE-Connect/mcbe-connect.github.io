@@ -2,34 +2,61 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>{ MCBE Connect }</title>
+  <title>My BDS-Discord Bridge Bot</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:900px;margin:2rem auto;padding:1rem}
-    header{border-bottom:1px solid #ddd;padding-bottom:1rem;margin-bottom:1rem}
-    a.button{display:inline-block;padding:.5rem 1rem;background:#5865F2;color:#fff;border-radius:6px;text-decoration:none}
-    footer{margin-top:2rem;font-size:.9rem;color:#666}
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>My BDS-Discord Bridge Bot</h1>
-    <p>DiscordとMinecraft統合版（BDS）を連携するためのボット／アドオン。</p>
-    <p><a class="button" href="https://discord.com/oauth2/authorize?client_id=1451713181797060729&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener">Bot を招待する</a></p>
-  </header>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <h1 style="margin:0">BDS‑Discord Bridge</h1>
+          <div class="small">Discord と Minecraft 統合版（BDS）を安全に連携するボット</div>
+        </div>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="tos.html">利用規約</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
 
-  <section id="tos">
-    <h2>Terms of Service</h2>
-    <p><strong>利用条件:</strong> 本Botの利用は自己責任で行ってください。運営は予告なく機能変更・停止する権利を有します。禁止行為（スパム、違法行為、他者の妨害等）を行った場合、サービス利用を停止することがあります。</p>
-  </section>
+    <main>
+      <section class="card">
+        <div class="section-title">概要</div>
+        <p>このボットは Discord サーバーと Minecraft 統合版（Bedrock Dedicated Server）を連携します。チャット中継、サーバー起動通知、権限連携などの機能を提供します。</p>
 
-  <section id="privacy">
-    <h2>Privacy Policy</h2>
-    <p><strong>収集情報:</strong> Discord ユーザーID、サーバーID、設定情報など連携に必要な最小限の情報を扱います。ログは運用上一定期間保存します。第三者提供は行いません（法令に基づく場合を除く）。</p>
-  </section>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://discord.com/api/oauth2/authorize?client_id=CLIENT_ID&permissions=PERMISSIONS&scope=bot%20applications.commands" target="_blank" rel="noopener">Bot を招待する</a>
+          <a class="btn btn-outline" href="https://github.com/yourname/your-repo" target="_blank" rel="noopener">GitHub リポジトリ</a>
+          <a class="btn btn-outline" href="#docs">導入ガイド</a>
+        </div>
+      </section>
 
-  <footer>
-    <p>お問い合わせ: <a href="mailto:takkunmcjp@gmail.com">takkunmcjp@gmail.com</a></p>
-  </footer>
+      <section class="card" id="docs">
+        <div class="section-title">導入ガイド</div>
+        <ol>
+          <li>Discord Developer Portal でアプリを作成し、Bot を有効化します。</li>
+          <li>上の招待リンクの <span class="code">CLIENT_ID</span> と <span class="code">PERMISSIONS</span> を置き換えます。</li>
+          <li>BDS 側にアドオンを導入し、Bot のトークンを設定します（トークンは安全に保管してください）。</li>
+          <li>必要に応じて Webhook や設定ページで連携を調整します。</li>
+        </ol>
+        <p class="small">権限は最小限に留め、トークンは公開リポジトリに置かないでください。</p>
+      </section>
+
+      <section class="card" id="contact">
+        <div class="section-title">お問い合わせ</div>
+        <p>ご質問や不具合報告はメールでお願いします。</p>
+        <p><strong>メール</strong> <a href="mailto:you@example.com">you@example.com</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> BDS‑Discord Bridge</div>
+      <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    </footer>
+  </div>
 </body>
 </html>
