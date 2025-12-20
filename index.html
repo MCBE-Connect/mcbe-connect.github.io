@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>BDS‑Discord Bridge — ホーム</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">B</div>
+        <div class="title">
+          <h1>BDS‑Discord Bridge</h1>
+          <p>Discord と Minecraft 統合版（BDS）を安全に連携するボット</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="nav-link" href="#" id="nav-tos">利用規約</a>
+        <a class="nav-link" href="#" id="nav-privacy">プライバシーポリシー</a>
+        <a class="nav-link" href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card hero" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <div class="badge">Beta</div>
+          <h2 id="hero-title" class="h1">Discord と BDS をつなぐ、軽量で安全なブリッジ</h2>
+          <p class="lead">チャット中継、サーバー状態通知、権限連携など、BDS（Bedrock Dedicated Server）と Discord をスムーズに連携します。導入は簡単、設定は最小限。</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" id="invite-btn" href="https://discord.com/api/oauth2/authorize?client_id=CLIENT_ID&permissions=PERMISSIONS&scope=bot%20applications.commands" target="_blank" rel="noopener">Bot を招待する</a>
+            <a class="btn btn-ghost" href="https://github.com/yourname/your-repo" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="#docs">導入ガイド</a>
+          </div>
+
+          <div class="separator" aria-hidden="true"></div>
+
+          <div class="small"><strong>注意:</strong> 上の招待リンク内の <span class="code">CLIENT_ID</span> と <span class="code">PERMISSIONS</span> を必ず置き換えてください。トークンは公開しないでください。</div>
+        </div>
+
+        <div class="hero-right card" style="padding:14px">
+          <h3 style="margin-top:0">クイック設定</h3>
+          <ol style="margin:8px 0 0 18px;padding:0">
+            <li>Discord Developer Portal でアプリを作成</li>
+            <li>招待リンクの <span class="code">CLIENT_ID</span> を置換</li>
+            <li>BDS 側にアドオンを導入しトークンを設定</li>
+            <li>権限を最小化して運用</li>
+          </ol>
+          <div style="margin-top:12px" class="small">導入ガイドは GitHub リポジトリに詳述しています。</div>
+        </div>
+      </section>
+
+      <section class="card" id="features">
+        <h3 class="section-title">主な機能</h3>
+        <div class="grid">
+          <div class="feature">
+            <h3>チャット中継</h3>
+            <div class="small">Discord と BDS のチャットを双方向で同期します。メッセージフォーマットはカスタマイズ可能。</div>
+          </div>
+          <div class="feature">
+            <h3>サーバー通知</h3>
+            <div class="small">サーバー起動・停止・プレイヤー接続の通知を Discord に送信します。</div>
+          </div>
+          <div class="feature">
+            <h3>権限連携</h3>
+            <div class="small">Discord ロールに応じたゲーム内権限の付与・制御が可能です。</div>
+          </div>
+          <div class="feature">
+            <h3>軽量・自己ホスト可</h3>
+            <div class="small">低リソースで動作し、自己ホスト運用を想定しています。プライバシー重視。</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="docs">
+        <h3 class="section-title">導入の流れ（概要）</h3>
+        <p class="small">ここでは簡易的な流れを示します。詳細は GitHub の README を参照してください。</p>
+        <ol>
+          <li>Discord 側: アプリ作成 → Bot を有効化 → 必要な権限を設定</li>
+          <li>BDS 側: アドオンを配置 → 設定ファイルに Bot トークンとサーバー情報を記入</li>
+          <li>動作確認: Discord にメッセージを送って BDS 側に反映されるか確認</li>
+        </ol>
+
+        <div style="margin-top:12px" class="small"><strong>セキュリティチェックリスト</strong></div>
+        <ul class="small">
+          <li>Bot トークンは公開リポジトリに置かない</li>
+          <li>権限は最小限にする（管理者権限は避ける）</li>
+          <li>ログの保存期間とアクセス制御を明確にする</li>
+        </ul>
+      </section>
+
+      <section class="card" id="faq">
+        <h3 class="section-title">よくある質問</h3>
+        <div>
+          <strong>Q: 管理者権限は必要ですか？</strong>
+          <p class="small">A: いいえ。可能な限り最小権限で動作するよう設計してください。管理者権限は推奨しません。</p>
+        </div>
+        <div>
+          <strong>Q: トークンを失効させる方法は？</strong>
+          <p class="small">A: Discord Developer Portal でトークンを再生成してください。再生成後は BDS 側の設定を更新する必要があります。</p>
+        </div>
+      </section>
+
+      <section class="card" id="contact">
+        <h3 class="section-title">お問い合わせ</h3>
+        <p class="small">不具合報告や導入サポートは GitHub Issues またはメールで受け付けます。</p>
+        <p class="small"><strong>メール:</strong> <a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="small"><strong>GitHub:</strong> <a href="https://github.com/yourname/your-repo" target="_blank" rel="noopener">yourname/your-repo</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> BDS‑Discord Bridge</div>
+      <div class="small">このサイトは GitHub Pages で公開できます。HTTPS が自動で有効になります。</div>
+    </footer>
+  </div>
+
+  <!-- 準備中モーダル（利用規約・プライバシー用） -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h2 id="modal-title">準備中</h2>
+      <p id="modal-body">このページは現在準備中です。利用規約およびプライバシーポリシーは後日公開予定です。ご質問はお問い合わせからお願いします。</p>
+      <div class="actions">
+        <button class="btn btn-close" id="modal-close">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 年表示
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // モーダル制御
+    const backdrop = document.getElementById('modal-backdrop');
+    const navTos = document.getElementById('nav-tos');
+    const navPrivacy = document.getElementById('nav-privacy');
+    const modalClose = document.getElementById('modal-close');
+
+    function openModal(title, body) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-body').textContent = body;
+      backdrop.style.display = 'flex';
+      backdrop.setAttribute('aria-hidden','false');
+    }
+    function closeModal() {
+      backdrop.style.display = 'none';
+      backdrop.setAttribute('aria-hidden','true');
+    }
+
+    navTos.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('利用規約（準備中）', '利用規約ページは現在準備中です。公開までしばらくお待ちください。');
+    });
+    navPrivacy.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('プライバシーポリシー（準備中）', 'プライバシーポリシーは現在準備中です。公開までしばらくお待ちください。');
+    });
+    modalClose.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
